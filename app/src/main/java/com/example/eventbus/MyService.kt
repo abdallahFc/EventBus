@@ -20,7 +20,7 @@ class MyService : Service() {
     fun onEvent(resultData: sendData) {
         val num1=resultData.num1
         val num2=resultData.num2
-        val sum:Int= num1.plus(num2)
+        val sum:Int= num1+num2
         EventBus.getDefault().post(ResultData(sum))
         stopSelf()
     }
